@@ -57,17 +57,15 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body:
-        ListView.builder(itemBuilder: (context,index){
-            return
-            Container(
-                color: Colors.yellowAccent,
-                child:Text(arrNames[index],textAlign: TextAlign.center,style: const TextStyle(fontSize: 24,fontWeight: FontWeight.bold),)
-            );
-
+        ListView.separated(itemBuilder: (context,index){
+            return Text(arrNames[index],textAlign: TextAlign.center,style: const TextStyle(fontSize: 24,fontWeight: FontWeight.bold,),);
           },
+          //padding: const EdgeInsets.all(10),
           scrollDirection: Axis.vertical,
           itemCount: arrNames.length,
-          itemExtent: 50,
+          separatorBuilder: (context,index){
+             return const Divider(height: 35,thickness: 2,color: Colors.greenAccent,);
+          },
         )
 
 
