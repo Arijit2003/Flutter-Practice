@@ -1,3 +1,4 @@
+//import 'dart:ffi';
 import 'dart:io';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -49,7 +50,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    var arrNames = ["Arijit","Braj","Devashish","Devansh","Tanmay","Risav","Abhijit","Abhinav","Raghav","Akshit","Tejal","Rishiraj","Tushar"];
 
     return Scaffold(
       appBar: AppBar(
@@ -57,15 +57,42 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body:
-        ListView.separated(itemBuilder: (context,index){
-            return Text(arrNames[index],textAlign: TextAlign.center,style: const TextStyle(fontSize: 24,fontWeight: FontWeight.bold,),);
-          },
-          //padding: const EdgeInsets.all(10),
-          scrollDirection: Axis.vertical,
-          itemCount: arrNames.length,
-          separatorBuilder: (context,index){
-             return const Divider(height: 35,thickness: 2,color: Colors.greenAccent,);
-          },
+        Container(
+          width: double.infinity,
+          height: double.infinity,
+          color: Colors.blue.shade50,
+          child: Center(
+            child: Container(
+              width: 150,
+              height: 150,
+
+              decoration: BoxDecoration(
+                color: Colors.blueGrey,
+                // borderRadius:
+                // //BorderRadius.circular(11),
+                // //BorderRadius.all(Radius.elliptical(10, 20))
+                // const BorderRadius.only(topLeft: Radius.circular(16), bottomRight: Radius.circular(16)),
+                border: Border.all(
+                  width: 2,
+                  color: Colors.black87,
+                ),
+
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.black12,
+                    spreadRadius: 17.0,
+                    blurRadius: 14,
+
+                  )
+                ],
+                shape: BoxShape.circle
+
+
+
+
+              ),
+            ),
+          ),
         )
 
 
