@@ -62,127 +62,28 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body:
-        Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: SingleChildScrollView(
-            child:Column(
-              children: [
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      Container(
-                        margin: const EdgeInsets.only(bottom: 8),
-                        width: 200,
-                        height: 200,
-                        color: Colors.orange,
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(bottom: 8),
-                        width: 200,
-                        height: 200,
-                        color: Colors.blue,
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(bottom: 8),
-                        width: 200,
-                        height: 200,
-                        color: Colors.pink,
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(bottom: 8),
-                        width: 200,
-                        height: 200,
-                        color: Colors.yellowAccent,
-                      ),Container(
-                        margin: const EdgeInsets.only(bottom: 8),
-                        width: 200,
-                        height: 200,
-                        color: Colors.greenAccent,
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(bottom: 8),
-                        width: 200,
-                        height: 200,
-                        color: Colors.black87,
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(bottom: 8),
-                        width: 200,
-                        height: 200,
-                        color: Colors.amberAccent,
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(bottom: 8),
-                        width: 200,
-                        height: 200,
-                        color: Colors.red,
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(bottom: 8),
-                        width: 200,
-                        height: 200,
-                        color: Colors.orange,
-                      ),
+        ListView(
+          scrollDirection: Axis.vertical,
+          itemExtent: 50,
+          children: const [
+            Text("One",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+            Text("Two",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
 
+            Text("Three",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
 
-                    ],
-                  ),
-                ),
+            Text("Four",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
 
+            Text("Five",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+            Text("Six",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+            Text("Seven",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
 
-                Container(
-                  margin: const EdgeInsets.only(bottom: 8),
-                  height: 200,
-                  color: Colors.blue,
-                ),
-                Container(
-                  margin: const EdgeInsets.only(bottom: 8),
-                  height: 200,
-                  color: Colors.green
-                ),
-                Container(
-                  margin: const EdgeInsets.only(bottom: 8),
-                  height: 200,
-                  color: Colors.red,
-                ),
-                Container(
-                  margin: const EdgeInsets.only(bottom: 8),
-                  height: 200,
-                  color: Colors.pink,
-                ),
-                Container(
-                  margin: const EdgeInsets.only(bottom: 8),
-                  height: 200,
-                  color: Colors.yellow,
-                ),
-                Container(
-                  margin: const EdgeInsets.only(bottom: 8),
-                  height: 200,
-                  color: Colors.grey,
-                ),
-
-                Container(
-                  margin: const EdgeInsets.only(bottom: 8),
-                  height: 200,
-                  color: Colors.indigo,
-                ),
-                Container(
-                  margin: const EdgeInsets.only(bottom: 8),
-                  height: 200,
-                  color: Colors.black87,
-                ),
-                Container(
-                  margin: const EdgeInsets.only(bottom: 8),
-                  height: 200,
-                  color: Colors.yellowAccent,
-                ),
-
-
-
-              ],
-            ),
-          )
+            Text("Eight",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+            Text("Nine",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+            Text("Ten",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+            Text("Eleven",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+            Text("Twelve",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+            Text("Thirteen",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+          ],
         )
 
 
