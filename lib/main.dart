@@ -49,41 +49,25 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+    var arrNames = ["Arijit","Braj","Devashish","Devansh","Tanmay","Risav","Abhijit","Abhinav","Raghav","Akshit","Tejal","Rishiraj","Tushar"];
+
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
+
         title: Text(widget.title),
       ),
       body:
-        ListView(
+        ListView.builder(itemBuilder: (context,index){
+            return
+            Container(
+                color: Colors.yellowAccent,
+                child:Text(arrNames[index],textAlign: TextAlign.center,style: const TextStyle(fontSize: 24,fontWeight: FontWeight.bold),)
+            );
+
+          },
           scrollDirection: Axis.vertical,
+          itemCount: arrNames.length,
           itemExtent: 50,
-          children: const [
-            Text("One",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-            Text("Two",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-
-            Text("Three",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-
-            Text("Four",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-
-            Text("Five",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-            Text("Six",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-            Text("Seven",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-
-            Text("Eight",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-            Text("Nine",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-            Text("Ten",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-            Text("Eleven",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-            Text("Twelve",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-            Text("Thirteen",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-          ],
         )
 
 
