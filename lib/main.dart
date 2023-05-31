@@ -62,121 +62,127 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body:
+        Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: SingleChildScrollView(
+            child:Column(
+              children: [
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(bottom: 8),
+                        width: 200,
+                        height: 200,
+                        color: Colors.orange,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(bottom: 8),
+                        width: 200,
+                        height: 200,
+                        color: Colors.blue,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(bottom: 8),
+                        width: 200,
+                        height: 200,
+                        color: Colors.pink,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(bottom: 8),
+                        width: 200,
+                        height: 200,
+                        color: Colors.yellowAccent,
+                      ),Container(
+                        margin: const EdgeInsets.only(bottom: 8),
+                        width: 200,
+                        height: 200,
+                        color: Colors.greenAccent,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(bottom: 8),
+                        width: 200,
+                        height: 200,
+                        color: Colors.black87,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(bottom: 8),
+                        width: 200,
+                        height: 200,
+                        color: Colors.amberAccent,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(bottom: 8),
+                        width: 200,
+                        height: 200,
+                        color: Colors.red,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(bottom: 8),
+                        width: 200,
+                        height: 200,
+                        color: Colors.orange,
+                      ),
 
-        // Container(
-        //     width: 250,
-        //     height: 250,
-        //     color: Colors.yellow,
-        //     child: const Center(
-        //       child:
-        //       // Text(
-        //       //     "Hello My Friends. I am Arijit",
-        //       //     style: TextStyle(
-        //       //     fontSize: 22,
-        //       //     color: Colors.black,
-        //       //     fontWeight: FontWeight.bold,
-        //       //     backgroundColor: Colors.deepOrange
-        //       //   )
-        //
-        //       ) ,
-        //     )
-        // TextButton(
-        //   child: const Text("Click me",
-        //   style:
-        //     TextStyle(
-        //       fontSize: 20,
-        //       color: Colors.black,
-        //       fontWeight: FontWeight.w900
-        //     ),),
-        //   onPressed: (){
-        //     print("Button Clicked");
-        //     //String? a=stdin.readLineSync();
-        //   },
-        //   onLongPress: (){
-        //     print("Button is long pressed");
-        //   },
-        // ),
-        // ElevatedButton(
-        //   child: const Text("Elevated Button",style: TextStyle(
-        //     fontSize: 26,
-        //     fontWeight: FontWeight.bold,
-        //     color: Colors.amberAccent
-        //   ),),
-        //   onPressed: (){
-        //     print("Elevated Button");
-        //   },
-        //   onLongPress: (){
-        //     print("Elevated button long pressed");
-        //   },
-        // )
-        // OutlinedButton(
-        //   child: const Text("Outlined Button", style: TextStyle(
-        //     fontWeight: FontWeight.bold,
-        //     fontSize: 24
-        //   ),),
-        //   onPressed: (){
-        //     print("Outline Button pressed");
-        //   },
-        //   onLongPress: (){
-        //     print("Outlined button long pressed");
-        //   },
-        // )
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          crossAxisAlignment: CrossAxisAlignment.center,
 
-          children: [
-            Container(
+                    ],
+                  ),
+                ),
 
-              child: Image.asset("assets/images/laptop.jpg"),
-            ),
 
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children:  [
-                Text("HP 15 11th Gen Intel Core i5 Processor 15.6 inches(39.6cm)\nFHD Laptop (8GB/512GB SSD +32GB Intel Optane/Windows 10\nHome/MS Office/Jet Black/1.69 Kg), 15s-fq2071TU",
-                style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.black)),
-                InkWell(
-                  child: Text("\n\nVisit the HP Store\n\n",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w100,color: Colors.blue)),
-                  onTap: (){
-                    print("tapped");
-                    Fluttertoast.showToast(
-                        msg: "Tapped",
-                        toastLength: Toast.LENGTH_SHORT,
-                        gravity: ToastGravity.BOTTOM,
-                        timeInSecForIosWeb: 5,
-                        textColor: Colors.white,
-                        fontSize: 16.0
-                    );
-                  },
-                  onLongPress: (){
-                    print("long tapped");
-                    Fluttertoast.showToast(
-                        msg: "Long Tapped",
-                        toastLength: Toast.LENGTH_SHORT,
-                        gravity: ToastGravity.BOTTOM,
-                        timeInSecForIosWeb: 5,
-                        textColor: Colors.white,
-                        fontSize: 16.0
-                    );
-                  },
-                  onDoubleTap: (){
-                    print("Double tapped");
-                    Fluttertoast.showToast(
-                        msg: "Double tapped",
-                        toastLength: Toast.LENGTH_SHORT,
-                        gravity: ToastGravity.BOTTOM,
-                        timeInSecForIosWeb: 5,
-                        textColor: Colors.white,
-                        fontSize: 16.0
-                    );
-                  },
-                )
+                Container(
+                  margin: const EdgeInsets.only(bottom: 8),
+                  height: 200,
+                  color: Colors.blue,
+                ),
+                Container(
+                  margin: const EdgeInsets.only(bottom: 8),
+                  height: 200,
+                  color: Colors.green
+                ),
+                Container(
+                  margin: const EdgeInsets.only(bottom: 8),
+                  height: 200,
+                  color: Colors.red,
+                ),
+                Container(
+                  margin: const EdgeInsets.only(bottom: 8),
+                  height: 200,
+                  color: Colors.pink,
+                ),
+                Container(
+                  margin: const EdgeInsets.only(bottom: 8),
+                  height: 200,
+                  color: Colors.yellow,
+                ),
+                Container(
+                  margin: const EdgeInsets.only(bottom: 8),
+                  height: 200,
+                  color: Colors.grey,
+                ),
+
+                Container(
+                  margin: const EdgeInsets.only(bottom: 8),
+                  height: 200,
+                  color: Colors.indigo,
+                ),
+                Container(
+                  margin: const EdgeInsets.only(bottom: 8),
+                  height: 200,
+                  color: Colors.black87,
+                ),
+                Container(
+                  margin: const EdgeInsets.only(bottom: 8),
+                  height: 200,
+                  color: Colors.yellowAccent,
+                ),
+
+
 
               ],
-            )
-          ],
+            ),
+          )
         )
 
 
