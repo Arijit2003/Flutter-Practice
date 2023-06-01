@@ -57,38 +57,10 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body:
-         Row(
-          children: [
-            Expanded(
-              flex: 2,
-              child: Container(
-
-                color: Colors.orange,
-              ),
-            ),
-            Expanded(
-              flex: 3,
-              child: Container(
-
-                color: Colors.greenAccent,
-              ),
-            ),
-            Expanded(
-              flex: 4,
-              child: Container(
-
-                color: Colors.blue,
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-
-                color: Colors.black,
-              ),
-            )
-          ],
-        )
+         const Padding(
+             padding: EdgeInsets.all(14),
+             child: Text("Hello World",style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),)
+         )
 
 
     );
