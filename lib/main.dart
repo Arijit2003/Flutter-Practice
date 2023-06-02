@@ -1,4 +1,5 @@
 //import 'dart:ffi';
+
 import 'dart:io';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -45,8 +46,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-
-
+  
+  var namesArr = ["Arijit","Braj","Devashish","Khilrajsinh","Akshant","Tanmay","Kritika","Tejal"];
 
   @override
   Widget build(BuildContext context) {
@@ -56,14 +57,18 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: Text(widget.title),
       ),
-      body:
-           Container(
-             color: Colors.greenAccent,
-             margin: const EdgeInsets.all(15),
-             padding: const EdgeInsets.all(16),
-             child: const Text("Hello World",style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
-          )
+      body: ListView.builder(itemBuilder: (context,index){
+         return  ListTile(
+           leading: Text("$index"),
+           title: Text(namesArr[index]),
+           subtitle: const Text("VITIAN"),
+           trailing: const Icon(Icons.add),
+         );
+      },
+        itemCount: namesArr.length,
+        itemExtent: 100 ,
 
+      )
 
 
     );
