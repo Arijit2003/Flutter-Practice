@@ -57,17 +57,22 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: Text(widget.title),
       ),
-      body: ListView.builder(itemBuilder: (context,index){
-         return  ListTile(
-           leading: Text("$index"),
-           title: Text(namesArr[index]),
-           subtitle: const Text("VITIAN"),
-           trailing: const Icon(Icons.add),
-         );
-      },
-        itemCount: namesArr.length,
-        itemExtent: 100 ,
+      body: Padding(
+        padding: EdgeInsets.only(top: 10,bottom: 10),
+        child: ListView.separated(itemBuilder: (context,index){
+           return  ListTile(
+             leading: Text("$index"),
+             title: Text(namesArr[index]),
+             subtitle: const Text("VITIAN"),
+             trailing: const Icon(Icons.add),
+           );
+        },
+          itemCount: namesArr.length,
+          separatorBuilder: (context,index){
+            return Divider(color: Colors.black, thickness: 2,height: 100,);
+          },
 
+        ),
       )
 
 
