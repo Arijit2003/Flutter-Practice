@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset("assets/images/boy.png", width: 150,height: 150,),
-              const Text("Contact",style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold,color: Colors.black),),
+              const Text("Contact",style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold,color: Colors.black, fontFamily: "FontMain"),),
             ],
           ),
           ),
