@@ -1,6 +1,7 @@
 //import 'dart:ffi';
 
 import 'dart:io';
+import 'package:flutter_practice/ui_helper/extraFonts.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 import 'package:flutter/material.dart';
@@ -19,9 +20,16 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
+        textTheme:const  TextTheme(
+          headline1: TextStyle(fontSize: 24,fontFamily: "FontMain",color: Colors.black),
+          subtitle1: TextStyle(fontSize: 12,color: Colors.red),
+          subtitle2: TextStyle(fontSize: 12,color: Colors.red,fontFamily: "FontMain")
+
+        )
       ),
       home: const MyHomePage(title: 'Flutter Practice'),
+
     );
   }
 }
@@ -54,24 +62,22 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
+        //backgroundColor: Colors.orange,
+        title: Text(widget.title,style: TextStyle(color: Colors.white),),
 
-        title: Text(widget.title),
+
       ),
-      body: Center(
-        child: CircleAvatar(
-          //backgroundImage: const AssetImage("assets/images/boy.png"),
-          radius: 140,
-          backgroundColor: Colors.lightBlueAccent,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset("assets/images/boy.png", width: 150,height: 150,),
-              const Text("Contact",style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold,color: Colors.black, fontFamily: "FontMain"),),
-            ],
-          ),
-          ),
-
-
+      body:
+      Column(
+        children: [
+          Text("Hello World",style: Theme.of(context).textTheme.headline1,),
+          Text("Hello World",style: Theme.of(context).textTheme.subtitle1!.copyWith(fontFamily: "FontMain"),),
+          Text("Hello World",style: Theme.of(context).textTheme.headline1,),
+          Text("Hello World",style: Theme.of(context).textTheme.subtitle2,),
+          Text("Hello World",style: Theme.of(context).textTheme.headline1,),
+          Text("Hello World",style: Theme.of(context).textTheme.subtitle2,),
+          Text("Hello World",style: fontStyle36(fontColor: Colors.orange,myFontWeight: FontWeight.w400),)
+        ],
       )
 
 
