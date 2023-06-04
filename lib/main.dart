@@ -57,11 +57,19 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: Text(widget.title),
       ),
-      body: Padding(
+      body:
+      Padding(
         padding: EdgeInsets.only(top: 10,bottom: 10),
-        child: ListView.separated(itemBuilder: (context,index){
+        child:
+        ListView.separated(itemBuilder: (context,index){
            return  ListTile(
-             leading: Text("$index"),
+             leading:  Container(
+                 decoration: BoxDecoration(
+                   borderRadius: BorderRadius.circular(40),
+                   color: Colors.black,
+                 ),
+                 child: Image.asset("assets/images/person.png",width: 80,height: 80,),
+             ),
              title: Text(namesArr[index]),
              subtitle: const Text("VITIAN"),
              trailing: const Icon(Icons.add),
