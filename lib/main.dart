@@ -55,7 +55,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 
   
-  var namesArr = ["Arijit","Braj","Devashish","Khilrajsinh","Akshant","Tanmay","Kritika","Tejal"];
+  var namesArr = ["Arijit","Braj","Devashish","Khilrajsinh","Akshant","Tanmay","Kritika","Tejal","Risav Jha","Devasee","Devansh","Arya","Abhijit","Manish","Aditya","Aman","Vinati","Anjali","Nilay","Pushkar"];
 
   @override
   Widget build(BuildContext context) {
@@ -68,16 +68,40 @@ class _MyHomePageState extends State<MyHomePage> {
 
       ),
       body:
-      Column(
-        children: [
-          Text("Hello World",style: Theme.of(context).textTheme.headline1,),
-          Text("Hello World",style: Theme.of(context).textTheme.subtitle1!.copyWith(fontFamily: "FontMain"),),
-          Text("Hello World",style: Theme.of(context).textTheme.headline1,),
-          Text("Hello World",style: Theme.of(context).textTheme.subtitle2,),
-          Text("Hello World",style: Theme.of(context).textTheme.headline1,),
-          Text("Hello World",style: Theme.of(context).textTheme.subtitle2,),
-          Text("Hello World",style: fontStyle36(fontColor: Colors.orange,myFontWeight: FontWeight.w400),)
-        ],
+      ListView.builder(itemBuilder: (context,index){
+          return Card(
+            margin: EdgeInsets.all(8),
+            elevation: 7,
+            color: Color.fromRGBO(0, 223, 162, 1),
+            shadowColor: Color.fromRGBO(0, 223, 162, 1),
+            child: ListTile(
+              leading: const CircleAvatar(
+                backgroundImage: AssetImage("assets/images/boy.png"),
+                radius: 40,
+              ),
+              title: Text(namesArr[index],style: Theme.of(context).textTheme.headline1),
+              subtitle: Text("Student"),
+              trailing: InkWell(
+                  child: Icon(Icons.edit),
+                  onTap: (){
+                    Fluttertoast.showToast(
+                        msg: "Edit icon clicked",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.CENTER,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.red,
+                        textColor: Colors.white,
+                        fontSize: 16.0
+                    );
+                  },
+              ),
+            ),
+          );
+        },
+        itemCount: namesArr.length,
+        
+
+
       )
 
 
