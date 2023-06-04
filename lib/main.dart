@@ -59,11 +59,19 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: CircleAvatar(
-          backgroundImage: AssetImage("assets/images/boy.png"),
-          radius: 150,
+          //backgroundImage: const AssetImage("assets/images/boy.png"),
+          radius: 140,
           backgroundColor: Colors.lightBlueAccent,
-          child: Text("Person",style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold,color: Colors.black),),
-        ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset("assets/images/boy.png", width: 150,height: 150,),
+              const Text("Contact",style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold,color: Colors.black),),
+            ],
+          ),
+          ),
+
+
       )
 
 
