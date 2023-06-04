@@ -57,29 +57,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: Text(widget.title),
       ),
-      body:
-      Padding(
-        padding: EdgeInsets.only(top: 10,bottom: 10),
-        child:
-        ListView.separated(itemBuilder: (context,index){
-           return  ListTile(
-             leading:  Container(
-                 decoration: BoxDecoration(
-                   borderRadius: BorderRadius.circular(40),
-                   color: Colors.black,
-                 ),
-                 child: Image.asset("assets/images/person.png",width: 80,height: 80,),
-             ),
-             title: Text(namesArr[index]),
-             subtitle: const Text("VITIAN"),
-             trailing: const Icon(Icons.add),
-           );
-        },
-          itemCount: namesArr.length,
-          separatorBuilder: (context,index){
-            return Divider(color: Colors.black, thickness: 2,height: 100,);
-          },
-
+      body: Center(
+        child: CircleAvatar(
+          backgroundImage: AssetImage("assets/images/boy.png"),
+          radius: 150,
+          backgroundColor: Colors.lightBlueAccent,
+          child: Text("Person",style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold,color: Colors.black),),
         ),
       )
 
