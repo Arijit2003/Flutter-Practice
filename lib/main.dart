@@ -71,9 +71,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ListView.builder(itemBuilder: (context,index){
           return Card(
             margin: EdgeInsets.all(8),
-            elevation: 7,
-            color: Color.fromRGBO(0, 223, 162, 1),
-            shadowColor: Color.fromRGBO(0, 223, 162, 1),
+
+
             child: ListTile(
               leading: const CircleAvatar(
                 backgroundImage: AssetImage("assets/images/boy.png"),
